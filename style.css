@@ -71,15 +71,15 @@ header h1 {
   padding: 8px 0 7px;
 }
 
-p {
-  margin: 4.3rem 1rem 3rem;
-
+header p {
   line-height: 1.7rem;
 
   color: var(--fc-description);
 
   font-family: var(--ff-description);
   font-size: var(--fs-subNdescription);
+
+  padding: 4.3rem 4.2rem 3rem;
 }
 
 main {
@@ -175,9 +175,8 @@ img {
 
   main {
     grid-template-areas:
-      "A A"
-      "B D"
-      "E C";
+      "A B"
+      "D C";
   }
 
   main div:nth-child(1) {
@@ -195,21 +194,27 @@ img {
   main div:nth-child(4) {
     grid-area: D;
   }
-
-  main div:nth-child(5) {
-    grid-area: E;
-  }
 }
 
 @media (min-width: 1024px) {
+  header h1 {
+    line-height: 5rem;
+    font-size: 5rem;
+  }
+
+  header p {
+    padding: 4.3rem 20rem;
+    font-size: 2.5rem;
+    line-height: 2.6rem;
+  }
+
   img {
     height: 45rem;
   }
 
   main {
     grid-template-areas:
-      "A A A A"
-      "B C D E";
+      "A B C D";
   }
 
   main div:nth-child(1) {
@@ -226,9 +231,5 @@ img {
 
   main div:nth-child(4) {
     grid-area: D;
-  }
-
-  main div:nth-child(5) {
-    grid-area: E;
   }
 }
